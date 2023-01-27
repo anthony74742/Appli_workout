@@ -1,0 +1,16 @@
+{
+    "users" : [
+        {
+            "user":"Anthony",
+            "mdp":"1234",
+            "favory":[],
+            "history":[]
+        },
+        {
+            "user":"Yey",
+            "mdp":"1000",
+            "favory":[],
+            "history":[]
+        }
+    ]
+}
