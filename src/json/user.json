@@ -5,7 +5,7 @@
             "mdp":"1234",
             "profil": {
                 "name": "Anthony",
-                "description": "Un grand sportif",
+                "description": "Un grand sportif, j'adore faire la course et travailler mon endurence mais j'aime tous de même faire du renfort musculaire",
                 "image": "https://pbs.twimg.com/profile_images/1311008414156423170/Kxu_7mQS_400x400.jpg"
             },
             "favory":[
@@ -29,6 +29,11 @@
         {
             "user":"Yey",
             "mdp":"1000",
+            "profil": {
+                "name": "Yey",
+                "description": "Un grand sportif, franchement le sport c'est pas oof fait je le fait pour avoir une bonne santé",
+                "image": "https://pbs.twimg.com/profile_images/1611029914135699463/PrMPkMKZ_400x400.png"
+            },
             "favory":[],
             "history":[]
         }

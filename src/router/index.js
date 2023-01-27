@@ -4,6 +4,7 @@ import ConfigView from "../views/ConfigView.vue"
 import ProfilView from "../views/ProfilView.vue"
 import SeanceView from "../views/SeanceView.vue"
 import LoginView from "../views/LoginView.vue"
+import Sign_inView from "../views/Sign_inView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,14 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: LoginView,
+    },
+    {
+      path: "/sign-in",
+      name: "sign-in",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: Sign_inView,
     },
   ],
 });

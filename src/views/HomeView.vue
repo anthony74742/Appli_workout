@@ -5,6 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <main>
     <RouterLink to="/login"><button>Login</button></RouterLink>
+    <RouterLink to="/sign-in"><button>Sign-in</button></RouterLink>
     <div>
       <p class="bienvenue">
       Bonjour à toi <br>mon sportif
