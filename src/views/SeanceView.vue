@@ -9,7 +9,9 @@
                 intervalId: null,
                 buttonEnable: false,
                 indexExo: 0,
-                buttonName: "next"
+                buttonName: "next",
+                finish: false,
+                date: new Date()
             }
         },
         methods: {
@@ -39,6 +41,16 @@
                         this.seconds++
                     }
                 }, 1000)
+            },
+            finishButton() {
+                this.finish = !this.finish
+            },
+            getNow() {
+                let date = new Date()
+                let jour = date.getDate()
+                let mois = date.getMonth() + 1
+                let dateNow = `${jour}/${mois}`
+                return dateNow
             }
         },
     }
@@ -48,16 +60,44 @@
 <template>
     <div>
         <p>{{ store.TimelineExo[indexExo].sport }}</p>
+        <p>{{getNow()}}</p>
         <p>Nombre de répétition: {{ store.TimelineExo[indexExo].rep }}</p>
         <p>Temps actuel: {{ minutes }}:{{ seconds }}</p>
         <p>Temps à faire: {{ store.TimelineExo[this.indexExo].temps.split(':')[0] }}:{{ store.TimelineExo[this.indexExo].temps.split(':')[1] }}</p>
-        <button ref="button" @click="timer" :disabled="buttonEnable">{{ buttonName }}</button>
+        <button v-if="buttonName == 'next'" ref="button" @click="timer" :disabled="buttonEnable">next</button>
+        <button v-else ref="button" @click="finishButton" :disabled="buttonEnable">finish</button>
         <audio ref="audio">
             <source src="../assets/Sound/finish.mp3" type="audio/mpeg">
         </audio>
     </div>
+    <div class="complete" v-show="finish">
+        <p>Vous avez terminer. Avez vous aimez cette séance ?</p>
+        <div class="button">
+            <button>No</button>
+            <button>Yes</button>
+        </div>
+    </div>
   </template>
 
 <style>
-
+    .complete {
+        position: absolute;
+        top: 25%;
+        left: 1vw;
+        width: 100%;
+        height: 50vh;
+        background-color:aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .button {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 </style>

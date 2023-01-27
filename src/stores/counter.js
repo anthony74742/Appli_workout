@@ -7,7 +7,9 @@ export const store = reactive({
   Endurence: ["Ouai", "Oui","Ouai", "Oui","Ouai", "Oui","Ouai", "Oui"],
   TimelineExo: [],
   Users: user.users,
+  UserName: "",
   Favory: [],
-  History: []
+  History: [],
+  Profil: ""
 });
 

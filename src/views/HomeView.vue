@@ -1,9 +1,10 @@
-<script setup>
-
+<script>
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
   <main>
+    <RouterLink to="/login"><button>Login</button></RouterLink>
     <div>
       <p class="bienvenue">
       Bonjour à toi <br>mon sportif

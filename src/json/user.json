@@ -3,8 +3,28 @@
         {
             "user":"Anthony",
             "mdp":"1234",
-            "favory":[],
-            "history":[]
+            "profil": {
+                "name": "Anthony",
+                "description": "Un grand sportif",
+                "image": "https://pbs.twimg.com/profile_images/1311008414156423170/Kxu_7mQS_400x400.jpg"
+            },
+            "favory":[
+                {
+                    "id": 0,
+                    "sport": "Pompe",
+                    "rep": "5",
+                    "temps": "0:15"
+                    
+                },
+                {
+                    "id": 0,
+                    "sport": "Pompe",
+                    "rep": "5",
+                    "temps": "0:15"
+                }
+            ],
+            "history":[
+            ]
         },
         {
             "user":"Yey",
