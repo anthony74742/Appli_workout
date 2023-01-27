@@ -10,6 +10,7 @@ export const store = reactive({
   UserName: "",
   Favory: [],
   History: [],
-  Profil: ""
+  Profil: "",
+  IsLog: false
 });
 

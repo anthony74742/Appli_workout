@@ -15,14 +15,22 @@ export default {
             id: null,
             sport: "",
             rep: null,
-            temps: null
+            temps: null,
+            date: null
           }
       };
   },
   methods: {
+    getNow() {
+      let date = new Date()
+      let jour = date.getDate()
+      let mois = date.getMonth() + 1
+      let dateNow = `${jour}/${mois}`
+      return dateNow
+    },
     addObj(sport) {
 
-      this.ListExercice.push({ ...this.obj, sport, id: this.ListExercice.length})
+      this.ListExercice.push({ ...this.obj, sport, id: this.ListExercice.length, date: this.getNow()})
       console.log(this.ListExercice)
     },
     log(e) {

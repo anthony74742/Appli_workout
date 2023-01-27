@@ -17,12 +17,14 @@ export default {
                     console.log('log')
                     store.UserName = userExist.user
                     store.Profil = userExist.profil
+                    store.IsLog = true
                     for (let i=0; i<userExist.favory.length; i++){
                         store.Favory.push(userExist.favory[i])
                     }
                     for (let i=0; i<userExist.history.length; i++){
                         store.History.push(userExist.history[i])
                     }
+                    console.log(store.History)
                     this.$router.go(-1)
                 } else {
                     console.log("Mdp false")

@@ -44,13 +44,6 @@
             },
             finishButton() {
                 this.finish = !this.finish
-            },
-            getNow() {
-                let date = new Date()
-                let jour = date.getDate()
-                let mois = date.getMonth() + 1
-                let dateNow = `${jour}/${mois}`
-                return dateNow
             }
         },
     }
@@ -60,7 +53,7 @@
 <template>
     <div>
         <p>{{ store.TimelineExo[indexExo].sport }}</p>
-        <p>{{getNow()}}</p>
+        <p>{{ store.TimelineExo[indexExo].date}}</p>
         <p>Nombre de répétition: {{ store.TimelineExo[indexExo].rep }}</p>
         <p>Temps actuel: {{ minutes }}:{{ seconds }}</p>
         <p>Temps à faire: {{ store.TimelineExo[this.indexExo].temps.split(':')[0] }}:{{ store.TimelineExo[this.indexExo].temps.split(':')[1] }}</p>
