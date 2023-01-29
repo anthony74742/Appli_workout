@@ -43,7 +43,16 @@ export default {
 </template>
 
 <style scoped>
+div {
+    color: rgba(232,232,232,255);
+}
 .history{
     margin-bottom: 1rem;
+    border: 1px black solid;
+    background-color: rgb(19,17,17);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 </style>

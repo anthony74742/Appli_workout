@@ -5,6 +5,7 @@ import ProfilView from "../views/ProfilView.vue"
 import SeanceView from "../views/SeanceView.vue"
 import LoginView from "../views/LoginView.vue"
 import Sign_inView from "../views/Sign_inView.vue"
+import { store } from "../stores/counter";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -58,3 +59,9 @@ const router = createRouter({
 });
 
 export default router;
+
+router.beforeEach(async (to, from) => {
+  if (!store.IsLog && to.name !== 'login') {
+    return { name: 'login' }
+  }
+})

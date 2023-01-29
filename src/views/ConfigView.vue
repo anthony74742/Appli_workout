@@ -38,7 +38,7 @@ export default {
     },
     removeFromList(e) {
       console.log(e)
-      this.ListExercice.splice( e,1)
+      this.ListExercice.splice( e,2)
     },
     SelectValue(e) {
       store.SportVal = e.target.value
@@ -56,6 +56,7 @@ export default {
       for (let i=0; i<this.ListExercice.length; i++){
         console.log(this.ListExercice[i])
         store.TimelineExo.push(this.ListExercice[i])
+        store.TimelineExo.push({...this.obj, sport:"Repo", id: this.ListExercice.length,  date:this.getNow(),rep:1, temps: "0:05"})
       }
       console.log(store.TimelineExo)
     }
@@ -94,6 +95,19 @@ export default {
   height: 100%;
 }
 
+.about select {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: rgb(19,17,17);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 80%;
+  height: 30px;
+  font-size: 15px;
+
+}
+
 .choix {
   display: flex;
   flex-direction: row;
@@ -110,6 +124,20 @@ export default {
   gap: 1rem;
   height: 58vh;
   overflow-y: scroll;
+}
+
+.confirm button {
+  font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        background-color: rgb(19,17,17);
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+        box-shadow:  5px 5px 10px #c5c5c5,
+             -5px -5px 10px #fbfbfb;
+             color: white;
 }
 
 @media (min-width: 1024px) {

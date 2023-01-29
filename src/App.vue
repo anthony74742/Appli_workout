@@ -3,7 +3,6 @@ import { RouterLink, RouterView } from "vue-router";
 import Navigation from "./components/Navigation.vue"
 import {store} from "./stores/counter.js"
 
-
 export default {
   data() {
     return {

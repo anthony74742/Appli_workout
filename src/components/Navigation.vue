@@ -19,7 +19,7 @@ export default {
 <template>
     <nav>
       <RouterLink to="/"><IconHome/></RouterLink>
-      <RouterLink to="/start" @click="store.ShowNav = false"><IconStart/></RouterLink>
+      <RouterLink to="/start"><IconStart/></RouterLink>
       <RouterLink to="/profil"><IconProfil/></RouterLink>
     </nav>
 </template>
